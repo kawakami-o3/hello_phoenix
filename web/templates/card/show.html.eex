@@ -1,0 +1,13 @@
+<h2>Show card</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @card.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: card_path(@conn, :edit, @card) %>
+<%= link "Back", to: card_path(@conn, :index) %>
