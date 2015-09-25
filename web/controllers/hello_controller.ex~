@@ -15,7 +15,7 @@ defmodule HelloPhoenix.HelloController do
         json conn, "invalid"
       [mail] ->
         #changeset = Address.changeset(%Address{email: mail})
-        changeset = MailAddress.changeset(%MailAddress{}, %{"address" => mail})
+        changeset = MailAddress.changeset(%MailAddress{address: mail})
 
         case Repo.insert(changeset) do
           {:ok, _} ->
